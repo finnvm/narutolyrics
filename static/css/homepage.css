@@ -1,0 +1,206 @@
+/* homepage.css */
+
+/* Import the Lato font from Google Fonts, Montserrat for headings, and Bangers for a more dynamic header title */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&family=Bangers&display=swap');
+
+html, body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b; /* Dark background color */
+    color: #f5f5f5; /* Light text color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+}
+
+header, footer {
+    background-color: #ff5733; /* Vibrant orange-red for header and footer */
+    color: #ffffff; /* White text color */
+    padding: 15px 0; /* Vertical padding */
+    width: 100%; /* Full width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header .container, footer .container {
+    max-width: 1000px; /* Maximum width */
+    margin: 0 auto; /* Centering */
+    padding: 0 20px; /* Horizontal padding */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Exciting font for the header and footer */
+}
+
+header h1 {
+    font-family: 'Bangers', cursive; /* Dynamic font for header title */
+    font-size: 3em; /* Adjust font size as needed */
+    margin: 0; /* Remove margin */
+}
+
+nav a {
+    color: #ffffff; /* White text color for links */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1000px; /* Maximum width */
+    margin: 0 auto; /* Centering */
+    width: calc(100% - 40px); /* Full width minus padding */
+}
+
+h2 {
+    text-align: center;
+    color: #ff5733; /* Vibrant orange-red for headings */
+    font-family: 'Bangers', cursive; /* Dynamic font for headings */
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+#articlesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.article-item {
+    background: #282828; /* Dark gray for article background */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    max-width: 45%; /* Adjusted maximum width to fit two articles side by side */
+    transition: box-shadow 0.3s ease;
+    overflow: hidden; /* Prevent image overflow */
+    word-wrap: break-word; /* Prevent text overflow */
+    flex: 1 1 calc(50% - 40px); /* Flex basis to adjust for two columns */
+    box-sizing: border-box;
+}
+
+.article-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.article-item h2 {
+    margin-top: 0;
+    color: #ffbd69; /* Warm yellow for article titles */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em; /* Smaller font size */
+}
+
+.article-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.article-item p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #d0d0d0; /* Light gray for text */
+}
+
+.article-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: #ffbd69; /* Warm yellow for 'read more' links */
+}
+
+.article-item a:hover {
+    color: #ff5733; /* Vibrant orange-red on hover */
+}
+
+.admin-buttons {
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-new-article {
+    background-color: #4caf50; /* Green for New Article button */
+    color: white;
+    margin-bottom: 20px; /* Space below the button */
+}
+
+.btn-edit {
+    background-color: #2196f3; /* Blue for Edit button */
+    color: white;
+}
+
+.btn-delete {
+    background-color: #f44336; /* Red for Delete button */
+    color: white;
+}
+
+.btn-new-article:hover {
+    background-color: #66bb6a; /* Lighter green on hover */
+}
+
+.btn-edit:hover {
+    background-color: #42a5f5; /* Lighter blue on hover */
+}
+
+.btn-delete:hover {
+    background-color: #ef5350; /* Lighter red on hover */
+}
+
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    color: white;
+    background-color: #ff5733; /* Vibrant orange-red for pagination */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #ffbd69; /* Warm yellow on hover */
+    color: #333; /* Dark text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    main {
+        padding: 20px 10px;
+        width: calc(100% - 20px); /* Full width minus padding */
+    }
+
+    .article-item {
+        margin: 10px auto;
+        padding: 15px;
+        max-width: 100%; /* Adjusted maximum width for single column layout */
+        flex: 1 1 100%;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+
+    .pagination a {
+        padding: 8px 16px;
+    }
+}
